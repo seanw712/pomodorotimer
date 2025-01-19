@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f6e8ff;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(156, 39, 176, 0.1);
+    max-width: 90%;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid red;
+    overflow: visible;
+}
+
+@keyframes rainbow1 {
+    0% { color: #FF0000; }    /* Bright Red */
+    20% { color: #FF00FF; }   /* Magenta */
+    40% { color: #0000FF; }   /* Blue */
+    60% { color: #00FFFF; }   /* Cyan */
+    80% { color: #00FF00; }   /* Lime */
+    100% { color: #FF0000; }  /* Back to Red */
+}
+
+@keyframes rainbow2 {
+    0% { color: #00FF00; }    /* Lime */
+    20% { color: #FF0000; }   /* Red */
+    40% { color: #FF00FF; }   /* Magenta */
+    60% { color: #0000FF; }   /* Blue */
+    80% { color: #00FFFF; }   /* Cyan */
+    100% { color: #00FF00; }  /* Back to Lime */
+}
+
+.timer {
+    font-size: 5rem;
+    margin: 2rem 0;
+    font-weight: 700;
+    color: #FF69B4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer.break-mode {
+    animation: rainbow 5s linear infinite;
+}
+
+.timer.break-mode #minutes {
+    animation: rainbow1 3s linear infinite;
+}
+
+.timer.break-mode #seconds {
+    animation: rainbow2 3s linear infinite;
+}
+
+.timer .colon {
+    color: #FF69B4;  /* Keep colon pink */
+}
+
+.controls button {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+    min-width: 120px;
+    height: 48px;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls button:hover {
+    background-color: #9B6B9E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(155, 107, 158, 0.3);
+}
+
+.mode {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #9C27B0;
+    font-weight: 500;
+}
+
+#break {
+    margin-top: 0;
+    background-color: #FF69B4;
+}
+
+#break:hover {
+    background-color: #9B6B9E;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+} 
