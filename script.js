@@ -23,7 +23,7 @@ function updateDisplay() {
 function switchMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
-    modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
+    modeText.textContent = isWorkTime ? 'Get To Work Bitch!' : 'Breaky Bitch';
     timerDisplay.classList.toggle('break-mode', !isWorkTime);
     updateDisplay();
 }
@@ -72,7 +72,7 @@ function resetTimer() {
 function switchToBreak() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
-    modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
+    modeText.textContent = isWorkTime ? 'Get at it bastard!' : 'Zennn!';
     breakButton.textContent = isWorkTime ? 'Break Timer' : 'Work Timer';
     timerDisplay.classList.toggle('break-mode', !isWorkTime);
     updateDisplay();
@@ -81,6 +81,7 @@ function switchToBreak() {
 startButton.addEventListener('click', toggleTimer);
 resetButton.addEventListener('click', resetTimer);
 breakButton.addEventListener('click', switchToBreak);
+
 
 // Initialize the display
 resetTimer(); 
